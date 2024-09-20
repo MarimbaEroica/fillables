@@ -62,24 +62,23 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 100%;
-    max-width: 500px;
+    width: 100%; /* Use the full width of the screen */
+    max-width: 100%; /* Ensure the keyboard does not exceed the screen width */
 }
 
 .keyboard-row {
     display: flex;
     justify-content: center;
     gap: 5px;
+    width: 100%; /* Ensure rows are also full width */
 }
 
 .key-button {
-    flex: 1;
-    height: 40px;
-    max-width: 40px;
-    max-height: 40px;
-    font-size: 16px;
+    flex: 1; /* Make each key take equal width */
+    height: 50px; /* Slightly taller for better touch targets on mobile */
+    font-size: 18px;
     text-align: center;
-    line-height: 40px;
+    line-height: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
@@ -87,40 +86,19 @@ body {
     font-family: monospace;
 }
 
-.key-button.disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.key-button.yellow {
-    background-color: yellow;
-}
-
-.key-button.green {
-    background-color: green;
-    color: white;
-}
-
 .key-button.backspace {
-    flex: 2;
-    max-width: 80px;
+    flex: 2; /* Make the backspace key twice as wide */
+    max-width: 20%; /* Constrain the max width relative to the screen */
 }
 
-#submit-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-}
+@media (max-width: 600px) {
+    .key-button {
+        height: 40px; /* Slightly smaller keys on smaller screens */
+        font-size: 16px;
+        line-height: 40px;
+    }
 
-#message-box {
-    margin-top: 10px;
-    font-size: 20px;
-    text-align: center;
-    color: #333;
+    .key-button.backspace {
+        max-width: 25%; /* Adjust backspace key for smaller screens */
+    }
 }
-
