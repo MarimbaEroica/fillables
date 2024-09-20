@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    flex-direction: column; /* Adjust layout for vertical alignment */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-auto-rows: 50px;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.prefilled {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.key-letter {
+    background-color: #c8e6c9;
+}
+
+.active {
+    background-color: #fff9c4;
+}
+
+.clue-box {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.keyboard {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.key-button {
+    flex: 1;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    font-family: monospace;
+}
+
+.key-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.key-button.yellow {
+    background-color: yellow;
+}
+
+.key-button.green {
+    background-color: green;
+    color: white;
+}
+
+.key-button.backspace {
+    flex: 2;
+    max-width: 80px;
+}
+
+#submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#message-box {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
